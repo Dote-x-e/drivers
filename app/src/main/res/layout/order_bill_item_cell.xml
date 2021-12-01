@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/call_navigate_Area"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/Gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/callUserArea"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:tint="@color/appThemeColor_1"
+                    android:id="@+id/imageCall"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/ic_calling" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/Gray" />
+
+            <LinearLayout
+                android:id="@+id/trackUserLocationArea"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:tint="@color/appThemeColor_1"
+                    android:id="@+id/imageMarker"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/ic_marker" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/order_item_gray_color">
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_arrow_icon"
+                        android:src="@mipmap/ic_arrow_down"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5">
+
+                    <com.view.MTextView
+                        android:id="@+id/orderIdHTxt"
+                        android:textAlignment="viewStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        app:customTypeFace="@string/robotomediumFont"
+                        android:text=""
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/txt_size_16" />
+
+                    <com.view.MTextView
+                        android:id="@+id/orderIdVTxt"
+                        android:textAlignment="viewStart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="start|center"
+                        app:customTypeFace="@string/robotomediumFont"
+                        android:text="11245735"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/txt_size_16" />
+                </LinearLayout>
+
+
+                <com.view.MTextView
+                    android:id="@+id/orderDateTxt"
+                    android:textAlignment="viewEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="end|center"
+                    app:customTypeFace="@string/robotolightFont"
+                    android:text="Apr 17, 03:15 pm"
+                    android:textColor="#4f4f4f"
+                    android:textSize="@dimen/txt_size_14" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/billDetail_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/white">
+
+            <com.view.MTextView
+                android:id="@+id/noSItemsTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="1 item(s)"
+                app:customTypeFace="@string/robotomediumFont"
+                android:textColor="@color/orangeLight"
+                android:textSize="@dimen/txt_size_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.view.MTextView
+                    android:id="@+id/orderTotalBillHTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="Total Bill"
+                    android:textColor="@color/textColor"
+                    app:customTypeFace="@string/robotolightFont"
+                    android:textSize="@dimen/txt_size_16" />
+
+                <com.view.MTextView
+                    android:id="@+id/orderTotalBillVTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="right"
+                    android:text="$4.00"
+                    android:textColor="@color/textColor"
+                    app:customTypeFace="@string/robotolightFont"
+                    android:textSize="@dimen/txt_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.view.MTextView
+                    android:id="@+id/collectAmountRestHTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="Pay Urban Kitli"
+                    android:textColor="@color/textColor"
+                    app:customTypeFace="@string/robotolightFont"
+                    android:textSize="@dimen/txt_size_16" />
+
+                <com.view.MTextView
+                    android:id="@+id/collectAmountRestVTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="right"
+                    android:text="$1.55"
+                    android:textColor="@color/textColor"
+                    app:customTypeFace="@string/robotolightFont"
+                    android:textSize="@dimen/txt_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.view.MTextView
+                    android:id="@+id/collectAmountUserHTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:textAlignment="viewStart"
+                    android:text="Collect from Customer"
+                    android:textColor="@color/textColor"
+                    app:customTypeFace="@string/robotolightFont"
+                    android:textSize="@dimen/txt_size_16" />
+
+                <com.view.MTextView
+                    android:id="@+id/collectAmountUserVTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textAlignment="viewEnd"
+                    android:text=""
+                    android:textColor="@color/textColor"
+                    app:customTypeFace="@string/robotolightFont"
+                    android:textSize="@dimen/txt_size_14" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
